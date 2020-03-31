@@ -130,7 +130,7 @@ public class Server implements Graph{
          wrt.release();
          return false;
      }
-     graph.get(firstVertex).remove(secondVertex);
+     graph.get(firstVertex).removeFirstOccurrence(secondVertex);
      int rnd = (int) (Math.random()*10000);	//random number from 0 to 10000
      Thread.sleep(rnd);
      log("remove",Thread.currentThread().getName(), firstVertex, secondVertex);
